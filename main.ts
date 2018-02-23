@@ -1,5 +1,11 @@
 
-
+enum RLMotor {
+    
+    M1,
+   
+    M2
+    
+}
 
 
 /**
@@ -18,7 +24,7 @@ namespace ruilongmotor {
       */
     //% blockId="ruilong_motor" block="drive motor %motor|speed %speed"
     //% weight=100
-    export function motor(motor: number, speed: number): void {
+    export function motor(motor: RLMotor, speed: number): void {
         let forward = (speed >= 0);
 
         if (speed > 1023) {
@@ -28,7 +34,7 @@ namespace ruilongmotor {
         }
         
 
-        if (motor == 1) {
+        if (motor == RLMotor.M1) {
             if(speed == 0)
             {
                 pins.analogWritePin(DigitalPin.P14, 0);
@@ -48,7 +54,7 @@ namespace ruilongmotor {
             }
             
         }
-        if (motor == 2) {
+        if (motor == RLMotor.M2) {
             if(speed == 0)
             {
                 pins.analogWritePin(DigitalPin.P15, 0);
