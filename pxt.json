@@ -1,0 +1,19 @@
+{
+    "name": "ruilongmotor",
+    "version": "0.4.1",
+    "description": "A ruilongmotor package for pxt-microbit",
+    "license": "Apache",
+    "dependencies": {
+        "core": "*"
+        
+    },
+    "files": [
+        "README.md",
+        "main.ts"
+    ],
+    "testFiles": [
+        "tests.ts"
+    ],
+    "yotta": {},
+    "public": true
+}
